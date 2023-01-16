@@ -50,6 +50,7 @@ export default function Nav() {
                             Home
                         </a>
                     </li>
+                    <span className="nav-divider"> | </span>
                     <li>
                         <a
                             className="nav-menu-link link-closed-opacity"
@@ -58,6 +59,7 @@ export default function Nav() {
                             About
                         </a>
                     </li>
+                    <span className="nav-divider"> | </span>
                     <li>
                         <a
                             className="nav-menu-link link-closed-opacity"
@@ -66,6 +68,7 @@ export default function Nav() {
                             Projects
                         </a>
                     </li>
+                    <span className="nav-divider"> | </span>
                     <li>
                         <a
                             className="nav-menu-link link-closed-opacity"

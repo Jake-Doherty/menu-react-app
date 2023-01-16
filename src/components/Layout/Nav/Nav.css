@@ -81,6 +81,10 @@
         list-style: none;
     }
 
+    .nav-divider {
+        display: none;
+    }
+
     /* TOGGLE CLASSES */
     .transparent {
         border: 15px solid black;
