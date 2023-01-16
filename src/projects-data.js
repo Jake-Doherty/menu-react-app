@@ -1,8 +1,8 @@
 export const projects = [
     {
         projectName: "For(Dummy of Dummies)",
-        deployedUrl: "dummy-of-dummies.netlify.app/",
-        repoUrl: "dummy-of-dummies.netlify.app/",
+        deployedUrl: "https://dummy-of-dummies.netlify.app/",
+        repoUrl: "https://github.com/GeoSauer/dummy-of-dummies",
         projectImage: "dummies-logo",
         projectAbout:
             "Along our personal journeys to become software developers we all noticed that, while some websites are absolutely stacked and overflowing with helpful information, they can also be overflowing with people not exactly thrilled to share information with those new to coding. We can't weed out all the bad eggs, but we aimed to create a space with the newer devs in mind that is geared specifically towards beginner questions and patient advice.",
@@ -15,7 +15,7 @@ export const projects = [
     },
     {
         projectName: "GlobotPDX",
-        deployedUrl: "globotpdx.herokuapp.com/",
+        deployedUrl: "https://globotpdx.herokuapp.com/",
         repoUrl:
             "https://github.com/sept22-express-slackigator/slackigator-backend",
         projectImage: "glogobotAvatar",
