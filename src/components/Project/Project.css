@@ -1,11 +1,43 @@
 .project {
-    min-height: 300px;
+    display: grid;
+    height: 350px;
+    width: 350px;
     color: white;
     background: rgba(97, 97, 97, 0.411);
     border: 2px solid white;
     border-radius: 5px;
 }
 
+.project-name-image-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
 .project-name {
+    text-align: center;
     color: white;
+}
+
+.project-anchors {
+    color: white;
+    text-decoration: underline;
+}
+
+.anchor-flexbox {
+    text-align: center;
+}
+
+.project-image {
+    width: 150px;
+    margin: 10px;
+}
+
+.contributors-container {
+    padding: 5px;
+}
+
+.about-project {
+    padding: 5px;
 }
