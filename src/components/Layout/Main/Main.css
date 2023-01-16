@@ -1,0 +1,16 @@
+main {
+    position: relative;
+    display: flex;
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: stretch;
+    justify-content: center;
+}
+
+main > h1 {
+    color: white;
+}
+
+main > h3 {
+    color: white;
+}
