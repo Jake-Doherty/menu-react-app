@@ -2,19 +2,46 @@ import React from "react";
 import "./Project.css";
 
 export default function Project(props) {
+    const contributors = [...props.contributors];
+
+    console.log(contributors);
     return (
         <>
             <li className="project">
-                <img src={`${props.projectImage}`} alt={props.name} />
-                <h3 className="project-name">{props.name}</h3>
-                <a className="deployed-site" href={props.projectUrl}>
-                    Deployed Site
-                </a>
-                <a className="repo" href={props.repoUrl}>
-                    Github Repo
-                </a>
+                <div className="project-name-image-container">
+                    <img
+                        className="project-image"
+                        src={`/project-images/${props.projectImage}.png`}
+                        alt={props.name}
+                    />
+                    <div>
+                        <h3 className="project-name">{props.name}</h3>
+                        <div className="anchor-flexbox">
+                            <a
+                                className="project-anchors"
+                                href={props.projectUrl}
+                            >
+                                Site
+                            </a>
+                            <span> | </span>
+                            <a className="project-anchors" href={props.repoUrl}>
+                                Repo
+                            </a>
+                        </div>
+                        <div className="contributors-container">
+                            <p className="contributor-p">
+                                {contributors.map((contributor, i) => {
+                                    if (contributors.length - 1 === i) {
+                                        return contributor;
+                                    } else {
+                                        return `${contributor}, `;
+                                    }
+                                })}
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <p className="about-project">{props.about}</p>
-                <p>{props.contributors}</p>
             </li>
         </>
     );
