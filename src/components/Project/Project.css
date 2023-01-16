@@ -1,0 +1,11 @@
+.project {
+    min-height: 300px;
+    color: white;
+    background: rgba(97, 97, 97, 0.411);
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.project-name {
+    color: white;
+}
