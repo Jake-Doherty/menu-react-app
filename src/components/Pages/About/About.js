@@ -6,7 +6,7 @@ import "./About.css";
 export default function About() {
     return (
         <>
-            <section>
+            <section className="about-me-container">
                 <img
                     id="headshot"
                     src={headShot}
