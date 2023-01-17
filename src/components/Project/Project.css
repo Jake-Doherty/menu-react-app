@@ -6,6 +6,15 @@
     background: rgba(97, 97, 97, 0.411);
     border: 2px solid white;
     border-radius: 5px;
+    transition: all 250ms ease-in-out;
+}
+
+.project:hover {
+    color: rgb(197, 197, 197);
+    background: rgba(0, 0, 0, 0.89);
+    border-radius: 20px;
+    border: 2px solid rgb(97, 97, 97);
+    transition: all 250ms ease-in-out;
 }
 
 .project-name-image-container {
@@ -35,6 +44,7 @@
 }
 
 .contributors-container {
+    text-align: center;
     padding: 5px;
 }
 
