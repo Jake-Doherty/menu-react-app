@@ -30,13 +30,13 @@ export const projects = [
         ],
     },
     {
-        projectName: "Pokemon Starter Battle",
+        projectName: "F.E.O.S.B.",
         deployedUrl:
             "https://deploy-preview-1--rock-paper-scissors-jd.netlify.app",
         repoUrl: "https://github.com/Jake-Doherty/rock-paper-scissors",
         projectImage: "PokemonRPS",
         projectAbout:
-            'A simple "Rock, Paper, Scissors" type game, played against the computer, with a Pokemon theme',
+            'A simple "Rock, Paper, Scissors" type game, played against the computer, featuring the final evolutions of the original 3 starter Pokemon.',
         projectContributors: ["Jake Doherty"],
     },
     {
