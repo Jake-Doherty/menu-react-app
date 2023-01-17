@@ -1,12 +1,12 @@
 import React from "react";
 import "./Home.css";
+import initials from "../../../Initials.png";
 
 export default function Home() {
     return (
         <>
             <div className="welcome-div">
-                <h1 className="welcome-header">Welcome!</h1>
-                <p className="tagline">Enjoy :)</p>
+                <img className="initials" src={initials} alt="my-initials" />
             </div>
         </>
     );

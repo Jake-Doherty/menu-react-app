@@ -35,18 +35,20 @@
 
 :root {
     /* --background-color: ; */
-    --header-background-color: linear-gradient(
+    --header-background-color: transparent;
+    /* linear-gradient(
         0deg,
-        rgb(184, 184, 184),
-        rgb(206, 208, 206),
-        rgb(226, 229, 226)
-    );
-    --footer-background-color: linear-gradient(
+        rgb(0, 0, 0),
+        rgb(31, 31, 31),
+        rgb(54, 54, 54) */
+
+    --footer-background-color: transparent;
+    /* linear-gradient(
         180deg,
         rgb(184, 184, 184),
         rgb(206, 208, 206),
         rgb(226, 229, 226)
-    );
+    ); */
     --label-color: linear-gradient(
         90deg,
         rgb(184, 184, 184),

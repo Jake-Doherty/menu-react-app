@@ -18,3 +18,8 @@
 .tagline {
     font-size: 5vmax;
 }
+
+.initials {
+    margin: 0 10px 0 0;
+    -webkit-filter: invert(100%);
+}

@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./Main.css";
 
 // background from https://upload.wikimedia.org/wikipedia/commons/e/e4/StarfieldSimulation.gif
-import background from "../../../background.gif";
+// import background from "../../../background.gif";
 
 // Components
 import Home from "../../Pages/Home/Home.js";
@@ -14,12 +14,12 @@ import Contact from "../../Pages/Contact/Contact.js";
 export default function Main() {
     return (
         <main
-            style={{
-                backgroundImage: `url(${background})`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-            }}
+        // style={{
+        //     backgroundImage: `url(${background})`,
+        //     backgroundSize: "cover",
+        //     backgroundRepeat: "no-repeat",
+        //     backgroundPosition: "center",
+        // }}
         >
             <Routes>
                 <Route exact path="/" element={<Home />} />
