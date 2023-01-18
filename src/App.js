@@ -1,11 +1,12 @@
+import React from "react";
 import "./App.css";
 import Footer from "./components/Layout/Footer/Footer.js";
 import Header from "./components/Layout/Header/Header.js";
 import Main from "./components/Layout/Main/Main.js";
 
 import background from "./background.gif";
+import { useState } from "react";
 
-// hopefully this doesn't mess things up!!!!
 function setStyles() {
     document.body.style.backgroundImage = `url(${background})`;
     document.body.style.backgroundSize = "cover";
@@ -15,10 +16,19 @@ function setStyles() {
 
 function App() {
     setStyles();
+    const [toggle, setToggle] = useState(true);
+
+    const [nav, setNav] = useState("home");
+
     return (
         <div className="App">
-            <Header />
-            <Main />
+            <Header
+                toggle={toggle}
+                setToggle={setToggle}
+                nav={nav}
+                setNav={setNav}
+            />
+            <Main nav={nav} />
             <Footer />
         </div>
     );
