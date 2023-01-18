@@ -4,7 +4,6 @@ import "./Project.css";
 export default function Project(props) {
     const contributors = [...props.contributors];
 
-    console.log(contributors);
     return (
         <>
             <li className="project">
@@ -20,11 +19,18 @@ export default function Project(props) {
                             <a
                                 className="project-anchors"
                                 href={props.projectUrl}
+                                target="_blank"
+                                rel="noreferrer"
                             >
                                 Site
                             </a>
                             <span> | </span>
-                            <a className="project-anchors" href={props.repoUrl}>
+                            <a
+                                className="project-anchors"
+                                href={props.repoUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 Repo
                             </a>
                         </div>
