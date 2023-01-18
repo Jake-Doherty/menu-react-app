@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Nav.css";
 
-export default function Nav() {
-    const [toggle, setToggle] = useState(true);
-
+export default function Nav({ toggle, setToggle, nav, setNav }) {
     const handleClick = () => {
         const menuBtn = document.getElementById("menu-btn");
         const navMenu = document.getElementById("nav-menu");
         const navContainer = document.getElementById("nav-container");
         if (toggle) {
-            console.log("I am open");
             navContainer.classList.toggle("nav-collapse");
             navContainer.classList.toggle("nav-open");
             navMenu.classList.toggle("toggle-nav-menu-closed");
@@ -18,7 +15,6 @@ export default function Nav() {
             menuBtn.classList.toggle("transparent");
             setToggle(false);
         } else {
-            console.log("I am closed");
             navContainer.classList.toggle("nav-open");
             navContainer.classList.toggle("nav-collapse");
             navMenu.classList.toggle("toggle-nav-menu-open");
@@ -29,53 +25,78 @@ export default function Nav() {
         }
     };
 
+    const handleNavClick = (e) => {
+        if (e.target.name === "home") {
+            setNav(e.target.value);
+        }
+        if (e.target.name === "about") {
+            setNav(e.target.value);
+        }
+        if (e.target.name === "projects") {
+            setNav(e.target.value);
+        }
+        if (e.target.name === "contact") {
+            setNav(e.target.value);
+        }
+    };
+
     return (
         <>
             <nav id="nav-container" className="nav-collapse">
-                <button
-                    id="menu-btn"
-                    className="transparent"
-                    onClick={handleClick}
-                >
-                    <span className="menu-btn-line"></span>
-                    <span className="menu-btn-line"></span>
-                    <span className="menu-btn-line"></span>
-                </button>
+                <div className="menu-button-container">
+                    <button
+                        id="menu-btn"
+                        className="transparent"
+                        onClick={handleClick}
+                    >
+                        <span className="menu-btn-line"></span>
+                        <span className="menu-btn-line"></span>
+                        <span className="menu-btn-line"></span>
+                    </button>
+                </div>
                 <ul id="nav-menu" className="toggle-nav-menu-closed">
                     <li>
-                        <a
-                            className="nav-menu-link link-closed-opacity"
-                            href="/"
+                        <button
+                            className="navigation-button"
+                            name="home"
+                            value="home"
+                            onClick={handleNavClick}
                         >
                             Home
-                        </a>
+                        </button>
                     </li>
                     <span className="nav-divider"> | </span>
                     <li>
-                        <a
-                            className="nav-menu-link link-closed-opacity"
-                            href="/about"
+                        <button
+                            className="navigation-button"
+                            name="about"
+                            value="about"
+                            onClick={handleNavClick}
                         >
                             About
-                        </a>
+                        </button>
                     </li>
                     <span className="nav-divider"> | </span>
                     <li>
-                        <a
-                            className="nav-menu-link link-closed-opacity"
-                            href="/projects"
+                        <button
+                            className="navigation-button"
+                            name="projects"
+                            value="projects"
+                            onClick={handleNavClick}
                         >
                             Projects
-                        </a>
+                        </button>
                     </li>
                     <span className="nav-divider"> | </span>
                     <li>
-                        <a
-                            className="nav-menu-link link-closed-opacity"
-                            href="/contact"
+                        <button
+                            className="navigation-button"
+                            name="contact"
+                            value="contact"
+                            onClick={handleNavClick}
                         >
                             Contact
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </nav>
