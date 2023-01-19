@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import initials from "../../../Initials.png";
+import initials from "../../../Initials.svg";
 
 export default function Home() {
     return (
