@@ -1,8 +1,6 @@
 import React from "react";
 import "./Main.css";
 
-import background from "../../../background.gif";
-
 // Components
 import Home from "../../Pages/Home/Home.js";
 import About from "../../Pages/About/About.js";
@@ -25,16 +23,5 @@ export default function Main({ nav }) {
         }
     };
 
-    return (
-        <main
-            style={{
-                backgroundImage: `url(${background})`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-            }}
-        >
-            {renderPageComponent()}
-        </main>
-    );
+    return <main>{renderPageComponent()}</main>;
 }

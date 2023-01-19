@@ -9,6 +9,7 @@ import { useState } from "react";
 
 function setStyles() {
     document.body.style.backgroundImage = `url(${background})`;
+    // document.body.style.backgroundImage = "none";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundPosition = "center";
