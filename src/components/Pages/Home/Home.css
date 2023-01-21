@@ -22,5 +22,5 @@
 .initials {
     margin: 0 10px 0 0;
     -webkit-filter: invert(100%);
-    z-index: 20;
+    z-index: -1;
 }

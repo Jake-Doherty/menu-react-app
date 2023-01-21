@@ -1,76 +1,75 @@
 import React, { useCallback, useMemo } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import "pathseg";
+// import "pathseg";
 import "./Home.css";
 import initials from "../../../InitialsSinglePath.svg";
-// import useScript from "../../../hooks/useScript.js";
+import usePathSegScript from "../../../hooks/useScript.js";
 
 export default function Home() {
-    // useScript(
-    //     "https://cdn.jsdelivr.net/npm/tsparticles-preset-links@2/tsparticles.preset.links.min.js"
-    // );
+    usePathSegScript(
+        "https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"
+    );
+
     const options = useMemo(() => {
         return {
             detectRetina: false,
-            fpsLimit: 30,
+            fpsLimit: 60,
             interactivity: {
                 detectsOn: "canvas",
                 events: {
-                    onDiv: {
-                        enable: true,
-                        ids: ["green-div", "white-div", "red-div"],
-                        mode: "bubble",
-                        type: ["rectangle", "char"],
-                    },
-                    resize: true,
                     onHover: {
                         enable: true,
-                        mode: ["grab", "bubble"],
+                        mode: ["bubble", "grab"],
                     },
+                    onClick: {
+                        enable: true,
+                        mode: "push",
+                    },
+                    resize: true,
                 },
                 modes: {
-                    bubble: {
-                        distance: 200,
-                        duration: 10,
-                        opacity: 1,
-                        size: 23,
-                        divs: [
-                            {
-                                ids: "red-div",
-                                color: "#ff0000",
-                            },
-                            {
-                                ids: "white-div",
-                                color: "#ffffff",
-                            },
-                            {
-                                ids: "green-div",
-                                color: "#00ff00",
-                            },
-                        ],
-                    },
                     grab: {
+                        distance: 100,
+                        lineLinked: {
+                            opacity: 1,
+                        },
+                    },
+                    repulse: {
                         distance: 200,
-                        duration: 10,
-                        opacity: 1,
+                        duration: 0.4,
+                        strength: 2,
+                    },
+                    push: {
+                        quantity: 4,
+                        size: 6,
+                    },
+                    bubble: {
+                        distance: 40,
+                        duration: 2,
+                        opacity: 8,
+                        size: 10,
+                        speed: 3,
                     },
                 },
             },
             particles: {
                 color: {
-                    value: "#0ff",
-                },
-                links: {
-                    blink: false,
-                    color: {
-                        value: ["#0ff"],
+                    value: "random",
+                    animation: {
+                        enable: true,
+                        speed: 20,
+                        sync: true,
                     },
-                    consent: false,
-                    distance: 40,
+                },
+                lineLinked: {
+                    blink: false,
+                    color: "random",
+                    consent: true,
+                    distance: 75,
                     enable: true,
                     opacity: 1,
-                    width: 2,
+                    width: 1,
                 },
                 move: {
                     attract: {
@@ -80,99 +79,72 @@ export default function Home() {
                             y: 1200,
                         },
                     },
-                    bounce: false,
+                    bounce: true,
                     direction: "none",
                     enable: true,
-                    outMode: "bounce",
+                    outMode: "out",
                     random: false,
-                    speed: 1,
+                    speed: 0.5,
                     straight: false,
+                    slow: {
+                        radius: 0,
+                        enable: true,
+                        strength: 20,
+                    },
                 },
                 number: {
                     density: {
-                        enable: false,
+                        enable: true,
                         area: 2000,
                     },
                     limit: 0,
-                    value: 800,
+                    value: 200,
                 },
                 opacity: {
                     animation: {
-                        enable: false,
-                        minimumValue: 0.05,
-                        speed: 2,
+                        enable: true,
+                        minimumValue: 0.5,
+                        speed: 0.05,
                         sync: false,
                     },
                     random: false,
-                    value: 0.5,
+                    value: 1,
                 },
                 shape: {
-                    character: [
-                        {
-                            fill: true,
-                            font: "Font Awesome 5 Brands",
-                            style: "",
-                            value: [
-                                "\uf179",
-                                "\uf38b",
-                                "\uf3b9",
-                                "\uf13b",
-                                "\uf1cb",
-                            ],
-                            weight: "400",
-                        },
-                        {
-                            fill: true,
-                            font: "Font Awesome 5 Free",
-                            style: "",
-                            value: [
-                                "\uf06a",
-                                "\uf7ba",
-                                "\uf3ed",
-                                "\uf55f",
-                                "\uf013",
-                            ],
-                            weight: "900",
-                        },
-                    ],
-                    type: ["char", "circle"],
+                    type: ["circle", "square", "polygon", "triangle"],
                 },
                 size: {
                     animation: {
-                        enable: false,
-                        minimumValue: 0.1,
-                        speed: 40,
+                        enable: true,
+                        minimumValue: 2,
+                        maximumValue: 6,
+                        speed: 2,
                         sync: false,
                     },
-                    random: false,
-                    value: 0.5,
+                    random: true,
+                    value: 6,
                 },
             },
             polygon: {
+                enable: true,
                 draw: {
                     enable: true,
-                    background: {
-                        color: "#000000",
-                    },
-                    lineColor: "rgba(0,255,255,0.2)",
-                    lineWidth: 0.5,
+                    lineColor: "rgba(255,255,255,0.2)",
+                    lineWidth: 1,
                 },
                 move: {
-                    radius: 5,
-                },
-                position: {
-                    x: 30,
-                    y: 30,
+                    radius: 10,
                 },
                 inlineArrangement: "equidistant",
-                scale: 5,
+                scale: 1,
                 type: "inline",
-                data: `${initials}`,
+                url: `${initials}`,
             },
         };
     }, []);
     const particlesInit = useCallback(async (engine) => {
         console.log(engine);
+        require("pathseg");
         // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
         // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
         // starting from v2 you can add only the features you need reducing the bundle size
@@ -185,13 +157,13 @@ export default function Home() {
     return (
         <>
             <div className="welcome-div">
-                <img className="initials" src={initials} alt="my-initials" />
                 <Particles
                     id="tsparticles"
                     init={particlesInit}
                     loaded={particlesLoaded}
                     options={options}
                 />
+                <img className="initials" src={initials} alt="my-initials" />
             </div>
         </>
     );
