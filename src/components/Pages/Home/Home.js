@@ -265,7 +265,7 @@ export default function Home() {
                     radius: 20,
                     type: "path",
                 },
-                scale: 1.067,
+                scale: window.innerHeight * 0.0012,
                 type: "inline",
                 url: `${initials}`,
                 position: {
