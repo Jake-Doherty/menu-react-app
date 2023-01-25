@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Routes } from "react-router";
 import "./Main.css";
 
 // Components
@@ -8,20 +9,30 @@ import Projects from "../../Pages/Projects/Projects.js";
 import Contact from "../../Pages/Contact/Contact.js";
 
 export default function Main({ nav }) {
-    const renderPageComponent = () => {
-        if (nav === "home") {
-            return <Home />;
-        }
-        if (nav === "about") {
-            return <About />;
-        }
-        if (nav === "projects") {
-            return <Projects />;
-        }
-        if (nav === "contact") {
-            return <Contact />;
-        }
-    };
+    // const renderPageComponent = () => {
+    //     if (nav === "home") {
+    //         return <Home />;
+    //     }
+    //     if (nav === "about") {
+    //         return <About />;
+    //     }
+    //     if (nav === "projects") {
+    //         return <Projects />;
+    //     }
+    //     if (nav === "contact") {
+    //         return <Contact />;
+    //     }
+    // };
 
-    return <main>{renderPageComponent()}</main>;
+    return (
+        <main>
+            {/* {renderPageComponent()} */}
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
+        </main>
+    );
 }
