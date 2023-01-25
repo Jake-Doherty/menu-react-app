@@ -1,49 +1,52 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
-export default function Nav({ toggle, setToggle, nav, setNav }) {
-    const handleClick = () => {
-        const menuBtn = document.getElementById("menu-btn");
-        const navMenu = document.getElementById("nav-menu");
-        const navContainer = document.getElementById("nav-container");
-        if (toggle) {
-            navContainer.classList.toggle("nav-collapse");
-            navContainer.classList.toggle("nav-open");
-            navMenu.classList.toggle("toggle-nav-menu-closed");
-            navMenu.classList.toggle("toggle-nav-menu-open");
-            menuBtn.classList.toggle("opaque");
-            menuBtn.classList.toggle("transparent");
-            setToggle(false);
-        } else {
-            navContainer.classList.toggle("nav-open");
-            navContainer.classList.toggle("nav-collapse");
-            navMenu.classList.toggle("toggle-nav-menu-open");
-            navMenu.classList.toggle("toggle-nav-menu-closed");
-            menuBtn.classList.toggle("transparent");
-            menuBtn.classList.toggle("opaque");
-            setToggle(true);
-        }
-    };
-
-    const handleNavClick = (e) => {
-        if (e.target.name === "home") {
-            setNav(e.target.value);
-        }
-        if (e.target.name === "about") {
-            setNav(e.target.value);
-        }
-        if (e.target.name === "projects") {
-            setNav(e.target.value);
-        }
-        if (e.target.name === "contact") {
-            setNav(e.target.value);
-        }
-    };
-
+export default function Nav() {
     return (
         <>
             <nav id="nav-container" className="nav-collapse">
-                <div className="menu-button-container">
+                <NavLink
+                    id="menu-btn"
+                    style={({ isActive }) => ({
+                        color: isActive ? "red" : "white",
+                    })}
+                    className="navigation-button"
+                    to="/"
+                >
+                    Home
+                </NavLink>
+                <NavLink
+                    id="menu-btn"
+                    style={({ isActive }) => ({
+                        color: isActive ? "red" : "white",
+                    })}
+                    className="navigation-button"
+                    to="/about"
+                >
+                    About
+                </NavLink>
+                <NavLink
+                    id="menu-btn"
+                    style={({ isActive }) => ({
+                        color: isActive ? "red" : "white",
+                    })}
+                    className="navigation-button"
+                    to="/projects"
+                >
+                    Projects
+                </NavLink>
+                <NavLink
+                    id="menu-btn"
+                    style={({ isActive }) => ({
+                        color: isActive ? "red" : "white",
+                    })}
+                    className="navigation-button"
+                    to="/contact"
+                >
+                    Contact
+                </NavLink>
+                {/* <div className="menu-button-container">
                     <button
                         id="menu-btn"
                         className="transparent"
@@ -98,7 +101,7 @@ export default function Nav({ toggle, setToggle, nav, setNav }) {
                             Contact
                         </button>
                     </li>
-                </ul>
+                </ul> */}
             </nav>
         </>
     );
