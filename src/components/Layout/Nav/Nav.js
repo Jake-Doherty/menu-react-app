@@ -46,62 +46,6 @@ export default function Nav() {
                 >
                     Contact
                 </NavLink>
-                {/* <div className="menu-button-container">
-                    <button
-                        id="menu-btn"
-                        className="transparent"
-                        onClick={handleClick}
-                    >
-                        <span className="menu-btn-line"></span>
-                        <span className="menu-btn-line"></span>
-                        <span className="menu-btn-line"></span>
-                    </button>
-                </div>
-                <ul id="nav-menu" className="toggle-nav-menu-closed">
-                    <li>
-                        <button
-                            className="navigation-button"
-                            name="home"
-                            value="home"
-                            onClick={handleNavClick}
-                        >
-                            Home
-                        </button>
-                    </li>
-                    <span className="nav-divider"> | </span>
-                    <li>
-                        <button
-                            className="navigation-button"
-                            name="about"
-                            value="about"
-                            onClick={handleNavClick}
-                        >
-                            About
-                        </button>
-                    </li>
-                    <span className="nav-divider"> | </span>
-                    <li>
-                        <button
-                            className="navigation-button"
-                            name="projects"
-                            value="projects"
-                            onClick={handleNavClick}
-                        >
-                            Projects
-                        </button>
-                    </li>
-                    <span className="nav-divider"> | </span>
-                    <li>
-                        <button
-                            className="navigation-button"
-                            name="contact"
-                            value="contact"
-                            onClick={handleNavClick}
-                        >
-                            Contact
-                        </button>
-                    </li>
-                </ul> */}
             </nav>
         </>
     );
