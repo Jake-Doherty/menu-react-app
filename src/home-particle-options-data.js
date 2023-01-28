@@ -1,4 +1,4 @@
-import initials from "./InitialsSinglePath.svg";
+import initials from "./assets/InitialsSinglePath.svg";
 
 const options = {
     fpsLimit: 120,
@@ -21,7 +21,7 @@ const options = {
                 modes: "none",
                 delay: 0.005,
                 quantity: 5,
-                pauseOnStop: true,
+                pauseOnStop: false,
                 particles: {
                     shape: {
                         type: "circle",
@@ -59,12 +59,6 @@ const options = {
                 },
                 radius: 330,
             },
-            grab: {
-                distance: 500,
-                lineLinked: {
-                    opacity: 0.2,
-                },
-            },
             bubble: {
                 delay: 1,
                 distance: 50,
@@ -75,41 +69,10 @@ const options = {
                     type: "circle",
                 },
             },
-            push: {
-                quantity: 4,
-            },
-            repulse: {
-                distance: 200,
-                duration: 0.4,
-            },
         },
     },
     particles: {
         reduceDuplicates: true,
-        destroy: {
-            mode: "split",
-            split: {
-                count: 1,
-                factor: {
-                    random: {
-                        enable: true,
-                        minimumValue: 0.2,
-                    },
-                    value: 3,
-                },
-                rate: {
-                    random: {
-                        enable: true,
-                        minimumValue: 0.2,
-                    },
-                    value: {
-                        min: 4,
-                        max: 9,
-                    },
-                },
-                sizeOffset: true,
-            },
-        },
         collisions: {
             absorb: {
                 speed: 5,
@@ -209,7 +172,7 @@ const options = {
                 value_area: 1000,
             },
             limit: 0,
-            value: 220,
+            value: 240,
         },
         opacity: {
             value: 1,
@@ -223,13 +186,6 @@ const options = {
                 min: 0,
                 max: 1,
             },
-        },
-        outModes: {
-            default: "out",
-            bottom: "out",
-            left: "out",
-            right: "out",
-            top: "out",
         },
         zIndex: {
             value: 100,

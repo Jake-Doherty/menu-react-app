@@ -3,10 +3,10 @@
               "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 
 <svg xmlns="http://www.w3.org/2000/svg"
+     width="355" height="590"
      viewBox="-177 -244 355 590">
   <path id="Imported Path"
-        
-        fill="" stroke="white" stroke-width="1"
+        fill="black" stroke="black" stroke-width="1"
         d="M 229.50,253.25
            C 229.12,254.38 228.75,259.00 228.75,263.62
              228.75,268.25 227.63,282.12 226.25,294.50
