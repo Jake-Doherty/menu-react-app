@@ -1,5 +1,5 @@
 import React from "react";
-import headShot from "../../../headshot-square.jpg";
+import headShot from "../../../assets/headshot-square.jpg";
 
 import "./About.css";
 
