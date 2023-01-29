@@ -159,7 +159,7 @@ const options = {
             trail: {
                 enable: true,
                 fillColor: {
-                    value: "#000000",
+                    value: "none",
                 },
                 length: 10,
                 opacity: 1,
@@ -211,7 +211,7 @@ const options = {
                     value: "#FFFFFF",
                 },
                 width: 1,
-                opacity: 0.01,
+                opacity: 0.5,
             },
         },
         enable: true,
