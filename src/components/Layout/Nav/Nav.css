@@ -1,138 +1,96 @@
 @media screen and (max-width: 768px) {
     #nav-container {
+        height: fit-content;
         position: fixed;
+        top: 70px;
         display: grid;
-        grid-template-rows: 60px 1fr;
-        top: 0;
-        left: 0;
-        width: fit-content;
-        padding: 0;
-        justify-content: space-between;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
         align-items: center;
-        overflow: hidden;
-        border-radius: 0 0 5px 0;
-        transition: all 500ms ease-in-out;
+    }
+    .nav-collapse {
+        left: -150px;
+        transition: all 250ms ease-in-out;
     }
 
     .nav-open {
-        background: black;
-        box-shadow: 0 0 2px 0.5px black;
-        z-index: 100;
+        left: 10px;
+        transition: all 250ms ease-in-out;
     }
 
-    .nav-collapse {
-        display: flex;
-        top: 0;
-        width: 100px;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+    #nav-toggle-btn {
+        z-index: -100;
         padding: 0;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        height: 40px;
+        width: 40px;
         overflow: hidden;
-        /* background: black;
-        box-shadow: 0 0 2px 0.5px black; */
-        transition: all 500ms ease-in-out;
-        z-index: 100;
+        background: rgb(255, 255, 255);
     }
 
-    a {
-        text-decoration: none;
-        font-weight: bold;
-        color: white;
+    #btn-filler {
+        margin: auto;
+        width: 90%;
+        height: 97%;
+        background: url("../../../assets/background.gif");
+        transition: all 250ms ease-in;
+    }
+
+    .toggle-btn-open,
+    .toggle-btn-open * {
+        clip-path: polygon(
+            100% 0%,
+            75% 50%,
+            100% 100%,
+            25% 100%,
+            0% 50%,
+            25% 0%
+        );
+        transition: all 250ms ease-in;
+    }
+
+    .toggle-btn-close,
+    .toggle-btn-close * {
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+        transition: all 250ms ease-in;
     }
 
     #menu-btn {
-        position: relative;
-        /* top: 5px; */
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        justify-content: space-evenly;
-        width: 75px;
-        height: 75px;
-        background: black;
-        border-radius: 50%;
-    }
-
-    .menu-btn-line {
         width: 100%;
-        height: 10px;
-        background: white;
-        margin: 5px 0;
-        transition: all 100ms ease-in;
-    }
-
-    #nav-menu {
-        position: relative;
-        top: 0;
-        left: -10px;
-        display: grid;
-        grid-template-rows: repeat(1fr, 4);
-        gap: 10px;
-        margin: 0 auto;
+        text-align: center;
+        border: 1px solid white;
         padding: 10px;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        height: fit-content;
-        background: black;
-        line-height: 1.5em;
+        border-radius: 5px;
         text-decoration: none;
-        list-style: none;
-    }
-
-    /* TOGGLE CLASSES */
-    .transparent {
-        border: 15px solid black;
-        scale: 50%;
-        opacity: 20%;
-        transition: all 750ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .opaque {
-        border: 15px solid black;
-        transform-origin: center;
-        rotate: 360deg;
-        scale: 100%;
-        opacity: 100%;
-        transition: all 750ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .toggle-nav-menu-closed {
-        opacity: 0;
-        transform: translateX(-150%);
-        transition: all 500ms ease-in;
-        z-index: -1;
-    }
-
-    .toggle-nav-menu-open {
-        transform: translateX(-0%);
-        transition: all 500ms cubic-bezier(0.21, -0.94, 1, 1);
+        background-image: url("/src/assets/background.gif");
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
 @media screen and (min-width: 768px) {
-    #menu-btn {
-        display: none;
-    }
-
-    #nav-menu {
+    .nav-collapse {
         display: flex;
-        flex-direction: row;
-        margin: 0 0 0 20px;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        height: 9vh;
-        /* background: black; */
-        line-height: 1.5em;
-        text-decoration: none;
-        list-style: none;
+        gap: 30px;
+        padding: 10px;
+        margin-right: 10px;
     }
 
-    a {
+    #menu-btn {
+        text-align: center;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 5px;
         text-decoration: none;
-        font-weight: bold;
-        color: black;
+        background-image: url("/src/assets/background.gif");
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }

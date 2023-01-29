@@ -2,13 +2,15 @@ import React from "react";
 import Nav from "../Nav/Nav.js";
 import "./Header.css";
 
-import initials from "../../../Initials.png";
-
-export default function Header() {
+export default function Header({ toggle, setToggle, nav, setNav }) {
     return (
         <header>
-            <img src={initials} alt="my-initials" />
-            <Nav />
+            <Nav
+                toggle={toggle}
+                setToggle={setToggle}
+                nav={nav}
+                setNav={setNav}
+            />
         </header>
     );
 }

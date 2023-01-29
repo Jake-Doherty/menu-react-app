@@ -2,7 +2,7 @@
     .skills-blurb {
         padding: 10px;
     }
-    section {
+    .about-me-container {
         color: white;
         width: 100%;
         position: relative;
@@ -66,7 +66,7 @@
     .skills-blurb {
         display: none;
     }
-    section {
+    .about-me-container {
         color: white;
         position: relative;
         margin: 0 auto;

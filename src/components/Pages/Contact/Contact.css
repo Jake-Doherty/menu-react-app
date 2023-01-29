@@ -1,0 +1,17 @@
+.contact-section {
+    display: none;
+    /* display: grid; */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    background: #333;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.social-container {
+    background: #000;
+    height: 90%;
+    width: 90%;
+}

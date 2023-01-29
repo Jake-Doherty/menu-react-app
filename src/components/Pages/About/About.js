@@ -1,12 +1,12 @@
 import React from "react";
-import headShot from "../../../headshot-square.jpg";
+import headShot from "../../../assets/headshot-square.jpg";
 
 import "./About.css";
 
 export default function About() {
     return (
         <>
-            <section>
+            <section className="about-me-container">
                 <img
                     id="headshot"
                     src={headShot}
