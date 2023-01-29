@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import options from "../home-particle-options-data.js";
+import options from "../data/home-particle-options-data.js";
 
 export function useHomeParticles(setParticles) {
     useEffect(() => {

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import notFoundOptions from "../not-found-particle-options-data.js";
+import notFoundOptions from "../data/not-found-particle-options-data.js";
 
 export function useNotFoundParticles(setParticles) {
     useEffect(() => {

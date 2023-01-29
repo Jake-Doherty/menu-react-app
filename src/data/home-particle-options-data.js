@@ -1,6 +1,6 @@
-import notFound from "./assets/404-Error-rafikiSP.svg";
+import initials from "../assets/InitialsSinglePath.svg";
 
-const notFoundOptions = {
+const options = {
     fpsLimit: 120,
     autoPlay: true,
     interactivity: {
@@ -159,7 +159,7 @@ const notFoundOptions = {
             trail: {
                 enable: true,
                 fillColor: {
-                    value: "#000000",
+                    value: "none",
                 },
                 length: 10,
                 opacity: 1,
@@ -172,7 +172,7 @@ const notFoundOptions = {
                 value_area: 1000,
             },
             limit: 0,
-            value: 220,
+            value: 240,
         },
         opacity: {
             value: 1,
@@ -211,7 +211,7 @@ const notFoundOptions = {
                     value: "#FFFFFF",
                 },
                 width: 1,
-                opacity: 0.01,
+                opacity: 0.5,
             },
         },
         enable: true,
@@ -222,9 +222,9 @@ const notFoundOptions = {
             radius: 8,
             type: "inline",
         },
-        scale: window.innerHeight * 0.0025,
+        scale: window.innerHeight * 0.0012,
         type: "inline",
-        url: notFound,
+        url: initials,
         position: {
             x: 50,
             y: 50,
@@ -232,4 +232,4 @@ const notFoundOptions = {
     },
 };
 
-export default notFoundOptions;
+export default options;
