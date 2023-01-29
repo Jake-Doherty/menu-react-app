@@ -1,8 +1,15 @@
 import React from "react";
 import "./Project.css";
 
-export default function Project(props) {
-    const contributors = [...props.contributors];
+export default function Project({
+    projectName,
+    deployedUrl,
+    repoUrl,
+    projectImage,
+    projectAbout,
+    projectContributors,
+}) {
+    const contributors = [...projectContributors];
 
     return (
         <>
@@ -10,15 +17,16 @@ export default function Project(props) {
                 <div className="project-name-image-container">
                     <img
                         className="project-image"
-                        src={`/project-images/${props.projectImage}.png`}
-                        alt={props.name}
+                        // src/assets/project-images/dummies-logo.png
+                        src={`/project-images/${projectImage}.png`}
+                        alt={projectName}
                     />
                     <div>
-                        <h3 className="project-name">{props.name}</h3>
+                        <h3 className="project-name">{projectName}</h3>
                         <div className="anchor-flexbox">
                             <a
                                 className="project-anchors"
-                                href={props.projectUrl}
+                                href={deployedUrl}
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -27,7 +35,7 @@ export default function Project(props) {
                             <span> | </span>
                             <a
                                 className="project-anchors"
-                                href={props.repoUrl}
+                                href={repoUrl}
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -47,7 +55,7 @@ export default function Project(props) {
                         </div>
                     </div>
                 </div>
-                <p className="about-project">{props.about}</p>
+                <p className="about-project">{projectAbout}</p>
             </li>
         </>
     );
