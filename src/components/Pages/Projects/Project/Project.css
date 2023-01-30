@@ -1,53 +1,50 @@
 .project {
+    color: white;
     display: grid;
-    height: 350px;
-    width: 350px;
-    color: white;
-    background: rgba(97, 97, 97, 0.411);
-    border: 2px solid white;
-    border-radius: 5px;
-    transition: all 250ms ease-in-out;
-}
-
-.project:hover {
-    color: rgb(197, 197, 197);
-    background: rgba(0, 0, 0, 0.89);
-    border-radius: 20px;
-    border: 2px solid rgb(97, 97, 97);
-    transition: all 250ms ease-in-out;
-}
-
-.project-name-image-container {
-    display: flex;
-    flex-direction: row-reverse;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        rgba(158, 158, 158, 0.05),
+        rgba(128, 128, 128, 0.2),
+        rgba(189, 189, 189, 0.25),
+        rgba(128, 128, 128, 0.2),
+        rgba(158, 158, 158, 0.05)
+    );
     align-items: center;
-    justify-content: center;
-}
-
-.project-name {
-    text-align: center;
-    color: white;
-}
-
-.project-anchors {
-    color: white;
-    text-decoration: underline;
-}
-
-.anchor-flexbox {
-    text-align: center;
+    justify-items: center;
 }
 
 .project-image {
-    width: 150px;
-    margin: 10px;
+    width: 100px;
 }
 
-.contributors-container {
-    text-align: center;
-    padding: 5px;
+.anchor-flexbox a {
+    color: white;
+}
+
+.dummies-logo {
+    width: 100%;
+}
+
+.glogobotAvatar {
+    width: 300px;
+}
+
+.HP-creature-crush {
+    width: 300px;
+}
+
+.PokemonRPS {
+    width: 300px;
 }
 
 .about-project {
-    padding: 5px;
+    padding: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.about-project::first-letter {
+    font-size: 1.8em;
+    color: white;
 }
