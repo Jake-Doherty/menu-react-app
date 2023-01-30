@@ -144,74 +144,35 @@ nav > a:hover {
 }
 
 ::-webkit-scrollbar {
-    height: 15px;
     width: 15px;
-}
-
-::-webkit-scrollbar-button:vertical:start:decrement {
-    background: var(--card-color);
-    border: 1px solid var(--border2-color);
-    border-radius: 7.5px 7.5px 0 0;
     height: 15px;
-    width: 15px;
 }
-
-::-webkit-scrollbar-button:vertical:start:decrement:hover {
-    background: var(--hover-recipe-card-color);
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
 }
-
-::-webkit-scrollbar-button:vertical:end:increment {
-    background: var(--card-color);
-    border-radius: 0 0 7.5px 7.5px;
-    border: 1px solid var(--border2-color);
-    height: 15px;
-    width: 15px;
-}
-
-::-webkit-scrollbar-button:vertical:end:increment:hover {
-    background: var(--hover-recipe-card-color);
-}
-::-webkit-scrollbar-button:horizontal:start:decrement {
-    background: var(--card-color);
-    border: 1px solid var(--border2-color);
-    border-radius: 7.5px 0 0 7.5px;
-    height: 15px;
-    width: 15px;
-}
-
-::-webkit-scrollbar-button:horizontal:start:decrement:hover {
-    background: var(--hover-recipe-card-color);
-}
-
-::-webkit-scrollbar-button:horizontal:end:increment {
-    background: var(--card-color);
-    border-radius: 0 7.5px 7.5px 0;
-    border: 1px solid var(--border2-color);
-    height: 15px;
-    width: 15px;
-}
-
-::-webkit-scrollbar-button:horizontal:end:increment:hover {
-    background: var(--hover-recipe-card-color);
-}
-
-::-webkit-scrollbar-track {
-    background: var(--card-color);
-    box-shadow: inset 0px 0 2px 0.5px var(--nav-link-hover-shadow);
-    border: 1px solid var(--border2-color);
-}
-
 ::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: var(--card-color);
+    background: #e1e1e100;
+    border: 1px solid #ffffffa2;
+    border-radius: 50px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-    border-radius: 5px;
-    background: var(--hover-recipe-card-color);
-    box-shadow: inset 0px 0 5px 0.5px var(--nav-link-hover-shadow);
+    background: #ffffff77;
 }
-
+::-webkit-scrollbar-thumb:active {
+    background: #0000007a;
+}
+::-webkit-scrollbar-track {
+    background: #46464677;
+    border: 0.5px solid #ffffff1c;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+    background: #666666;
+}
+::-webkit-scrollbar-track:active {
+    background: #333333;
+}
 ::-webkit-scrollbar-corner {
-    display: none;
+    background: transparent;
 }
