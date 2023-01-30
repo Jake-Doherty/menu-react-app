@@ -1,17 +1,44 @@
 .contact-section {
     display: none;
-    /* display: grid; */
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    background: #333;
+    display: flex;
+    flex-direction: row;
     width: 90%;
-    height: 90%;
+    max-width: 800px;
+    height: fit-content;
     margin: auto;
-    justify-items: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .social-container {
-    background: #000;
-    height: 90%;
-    width: 90%;
+    height: fit-content;
+    width: fit-content;
+}
+
+.social-icon {
+    height: 100px;
+    width: 100px;
+}
+
+#linkedin-icon {
+    transition: all 0.2s cubic-bezier(0.26, -2.41, 0.25, 1);
+}
+
+#linkedin-icon:hover {
+    cursor: pointer;
+    scale: 0.9;
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.26, -2.41, 0.25, 1);
+}
+
+#github-icon {
+    -webkit-filter: invert(100%);
+    transition: all 0.2s cubic-bezier(0.26, -2.41, 0.25, 1);
+}
+
+#github-icon:hover {
+    cursor: pointer;
+    scale: 0.9;
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.26, -2.41, 0.25, 1);
 }
