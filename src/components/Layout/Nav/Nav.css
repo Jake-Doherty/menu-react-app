@@ -7,15 +7,18 @@
         grid-template-rows: repeat(4, 1fr);
         gap: 20px;
         align-items: center;
+        z-index: 10000;
     }
     .nav-collapse {
         left: -150px;
         transition: all 250ms ease-in-out;
+        z-index: 10000;
     }
 
     .nav-open {
         left: 10px;
         transition: all 250ms ease-in-out;
+        z-index: 10000;
     }
 
     #nav-toggle-btn {
@@ -37,8 +40,8 @@
         margin: auto;
         width: 90%;
         height: 97%;
-        background: url("../../../assets/background.gif");
         transition: all 250ms ease-in;
+        mix-blend-mode: screen !important;
     }
 
     .toggle-btn-open,
@@ -61,16 +64,15 @@
     }
 
     #menu-btn {
+        display: block;
         width: 100%;
         text-align: center;
         border: 1px solid white;
         padding: 10px;
         border-radius: 5px;
         text-decoration: none;
-        background-image: url("/src/assets/background.gif");
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: center;
+        backdrop-filter: blur(5px);
+        z-index: 100000 !important;
     }
 }
 
@@ -80,6 +82,7 @@
         gap: 30px;
         padding: 10px;
         margin-right: 10px;
+        z-index: 10000 !important;
     }
 
     #menu-btn {
@@ -88,9 +91,7 @@
         padding: 10px;
         border-radius: 5px;
         text-decoration: none;
-        background-image: url("/src/assets/background.gif");
-        background-size: auto;
-        background-repeat: no-repeat;
-        background-position: center;
+        backdrop-filter: blur(5px) !important;
+        z-index: 10000 !important;
     }
 }

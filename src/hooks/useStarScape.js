@@ -34,7 +34,7 @@ export function useStarScape() {
             return out;
         };
 
-        let stars = makeStars(10000);
+        let stars = makeStars(1000);
 
         const clear = () => {
             c.fillStyle = "black";

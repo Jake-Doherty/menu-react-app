@@ -1,8 +1,10 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Nav.css";
+import { Link } from "@mui/material";
 
 export default function Nav() {
+    const [isActive, setIsActive] = useState(false);
     const handleNavToggle = () => {
         const navToggleBtn = document.getElementById("nav-toggle-btn");
         const navContainer = document.getElementById("nav-container");
@@ -10,6 +12,51 @@ export default function Nav() {
         navContainer.classList.toggle("nav-open");
         navToggleBtn.classList.toggle("toggle-btn-open");
         navToggleBtn.classList.toggle("toggle-btn-close");
+    };
+
+    const navigate = useNavigate();
+
+    const type = window.location.pathname;
+
+    useEffect(() => {
+        switch (type) {
+            case "/":
+                setIsActive(true);
+                break;
+            case "/about":
+                setIsActive(true);
+                break;
+            case "/projects":
+                setIsActive(true);
+                break;
+            case "/contact":
+                setIsActive(true);
+                break;
+            default:
+                setIsActive(false);
+                break;
+        }
+    }, [type]);
+
+    const handleNavigate = (e) => {
+        console.log(e.target.textContent);
+        switch (e.target.textContent) {
+            case "Home":
+                navigate("/");
+                break;
+            case "About":
+                navigate("/about");
+                break;
+            case "Projects":
+                navigate("/projects");
+                break;
+            case "Contact":
+                navigate("/contact");
+
+                break;
+            default:
+                break;
+        }
     };
 
     return (
@@ -23,46 +70,48 @@ export default function Nav() {
                     <div id="btn-filler"></div>
                 </div>
 
-                <NavLink
+                <Link
                     id="menu-btn"
-                    style={({ isActive }) => ({
+                    underline={isActive ? "always" : "hover"}
+                    sx={{
                         color: isActive ? "red" : "white",
-                    })}
+                    }}
                     className="navigation-button"
-                    to="/"
+                    // to="/"
+                    onClick={handleNavigate}
                 >
                     Home
-                </NavLink>
-                <NavLink
+                </Link>
+                <Link
                     id="menu-btn"
-                    style={({ isActive }) => ({
+                    className="navigation-button"
+                    sx={({ isActive }) => ({
                         color: isActive ? "red" : "white",
                     })}
-                    className="navigation-button"
-                    to="/about"
+                    onClick={handleNavigate}
                 >
                     About
-                </NavLink>
-                <NavLink
+                </Link>
+                <Link
                     id="menu-btn"
-                    style={({ isActive }) => ({
+                    className="navigation-button"
+                    sx={({ isActive }) => ({
                         color: isActive ? "red" : "white",
                     })}
-                    className="navigation-button"
-                    to="/projects"
+                    onClick={handleNavigate}
                 >
                     Projects
-                </NavLink>
-                <NavLink
+                </Link>
+                <Link
                     id="menu-btn"
-                    style={({ isActive }) => ({
+                    className="navigation-button"
+                    sx={({ isActive }) => ({
                         color: isActive ? "red" : "white",
                     })}
-                    className="navigation-button"
-                    to="/contact"
+                    onClick={handleNavigate}
                 >
                     Contact
-                </NavLink>
+                </Link>
             </nav>
         </>
     );

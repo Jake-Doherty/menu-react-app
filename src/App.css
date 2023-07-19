@@ -132,7 +132,6 @@ body {
 
 nav > a:hover {
     transform: scale(110%);
-    background: var(--nav-link-hover-background);
     color: var(--primary-text-color);
     border: 1px solid var(--border-color);
     box-shadow: -1px 0 5px 0.5px var(--nav-link-hover-shadow);

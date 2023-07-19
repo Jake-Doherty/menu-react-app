@@ -90,7 +90,7 @@ export default function About() {
                             <td>CSS</td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td>Material UI</td>
                             <td>GitHub</td>
                         </tr>
                         <tr>

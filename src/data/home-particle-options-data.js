@@ -12,7 +12,7 @@ const options = {
             },
             onHover: {
                 enable: true,
-                mode: ["bubble", "connect"],
+                mode: ["bubble", "connect", "trail"],
             },
             resize: true,
         },
@@ -201,6 +201,11 @@ const options = {
             },
         },
         zLayers: 100,
+    },
+    background: {
+        color: {
+            value: "transparent",
+        },
     },
     pauseOnOutsideViewport: true,
     polygon: {

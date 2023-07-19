@@ -25,4 +25,6 @@
     overflow-x: auto;
     align-items: center;
     justify-items: center;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
 }

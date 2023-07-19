@@ -9,11 +9,11 @@ import { ParticlesProvider } from "./context/ParticlesContext.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     // <React.StrictMode>
-    <ParticlesProvider>
-        <BrowserRouter>
+    <BrowserRouter>
+        <ParticlesProvider>
             <App />
-        </BrowserRouter>
-    </ParticlesProvider>
+        </ParticlesProvider>
+    </BrowserRouter>
     // </React.StrictMode>
 );
 

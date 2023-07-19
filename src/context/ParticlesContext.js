@@ -7,23 +7,35 @@ const ParticlesContext = createContext();
 
 const ParticlesProvider = ({ children }) => {
     const [particles, setParticles] = useState([]);
+    const [loadingParticles, setLoadingParticles] = useState(true);
 
     const particlesInit = useCallback(
         async (engine) => {
-            await loadFull(engine);
-            await loadPolygonMaskPlugin(tsParticles);
-            await tsParticles.load("tsparticles", particles);
+            try {
+                await Promise.all([
+                    loadFull(engine),
+                    loadPolygonMaskPlugin(tsParticles),
+                ]);
+                tsParticles.load("tsparticles", particles);
+            } catch (e) {
+                console.error(e);
+            }
         },
         [particles]
     );
 
-    const particlesLoaded = useCallback(async (container) => {
-        await console.log(container);
-    }, []);
+    const particlesLoaded = useCallback(async (container) => {}, []);
 
     return (
         <ParticlesContext.Provider
-            value={{ particles, setParticles, particlesInit, particlesLoaded }}
+            value={{
+                particles,
+                setParticles,
+                particlesInit,
+                particlesLoaded,
+                loadingParticles,
+                setLoadingParticles,
+            }}
         >
             {children}
         </ParticlesContext.Provider>

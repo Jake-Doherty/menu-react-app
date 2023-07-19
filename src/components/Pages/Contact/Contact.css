@@ -1,13 +1,18 @@
 .contact-section {
     display: none;
     display: flex;
+    gap: 80px;
     flex-direction: row;
-    width: 90%;
     max-width: 800px;
     height: fit-content;
     margin: auto;
     justify-content: space-evenly;
     align-items: center;
+    backdrop-filter: blur(5px) !important;
+    z-index: 1000;
+    padding: 80px;
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 .social-container {
